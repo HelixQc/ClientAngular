@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col">
+      <h1 class="text-center">Rules</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" >Rules</th>
+            <!--<th></th>-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let rule of rules; let i = index">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ rule }}</td>
+            <!--<td><a href="">Delete</a></td>-->
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <br>
+    <h1 class="text-center">Comments</h1>
+    <div class="col-2"></div>
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" >Comments</th>
+            <!--<th></th>-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let comment of comments; let i = index">
+            <th scope="row">{{ i+ 1}}</th>
+            <td>{{ comment }}</td>
+            <!--<td><a href="" >Delete</a></td>-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <br>
+    <div class="col-2"></div>
+    <div class="col">
+      <br>
+      <form (ngSubmit)="submitComments()">
+        <label for="comments" class="form-label">Comments</label>
+        <textarea type="message" name="comments" id="comments" class="form-control" style="height: 13vh;" [(ngModel)]="formData.Comment"></textarea>
+        <br>
+        <div class="text-end">
+          <div class="btn-group " role="group" aria-label="Basic example">
+            <button type="submit" class="btn btn-outline-primary text-info">Add a comment</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <br>
+    <div class="col-2"></div>
+    <div class="col">
+      <br>
+      <form (ngSubmit)="submitRules()">
+        <label for="comments" class="form-label">Rules</label>
+        <textarea type="message" name="comments" id="comments" class="form-control" style="height: 13vh;" [(ngModel)]="formData.Rule"></textarea>
+        <br>
+        <div class="text-end">
+          <div class="btn-group " role="group" aria-label="Basic example">
+            <button type="submit" class="btn btn-outline-primary text-info">Add a new rule</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>
+<br>
+<br>
+

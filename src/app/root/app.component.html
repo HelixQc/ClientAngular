@@ -1,0 +1,21 @@
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-5">
+      <div class="col btn-group text-end">
+        <a class="btn btn-outline-success text-info" routerLink="">Home</a>
+        <a class="btn btn-outline-success text-info" routerLink="/Rules">Rules</a>
+      </div>
+    </div>
+    <div class="col-5">
+    </div>
+      <div class="col btn-group text-end"> 
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a class="btn btn-outline-primary text-info" routerLink="/login">Sign In</a>
+        <a class="btn btn-outline-primary text-info" routerLink="/signUp">Sign Up</a>
+        <a class="btn btn-outline-primary text-info" (click)="deleteCookie()" routerLink="">Logout</a>
+    </div> 
+    </div>
+  </div>
+<router-outlet></router-outlet>
+
